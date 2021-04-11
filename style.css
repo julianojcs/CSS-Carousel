@@ -1,0 +1,77 @@
+/*Font Awesome Fonts*/
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('https://www.cnm.edu/depts/community-partnerships/new-mexico-leadership-summit/fonts/fontawesome-webfont.ttf') format('truetype');
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+#wrapper {
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+}
+
+#items {
+  display: flex;
+  height: 90vh;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrollin: touch;
+  scroll-behavior: smooth;
+}
+
+#before::before {
+  position: absolute;
+  font-family: 'FontAwesome';
+  content: '\f053';
+  font-size: 3rem;
+  line-height: 4rem;
+  font-weight: 900;
+  color: gray;
+  opacity: .5;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+#after::after {
+  position: absolute;
+  font-family: 'FontAwesome';
+  content: '\f054';
+  font-size: 3rem;
+  line-height: 4rem;
+  font-weight: 900;
+  color: gray;
+  opacity: .5;
+  right: 0;
+  /* top: Calc(50% - 2rem); */
+  top: 0;
+  cursor: pointer;
+  padding-right: 1rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+img {
+  object-fit: cover;
+  flex: none;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  pointer-events: none;
+}
